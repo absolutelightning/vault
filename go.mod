@@ -10,7 +10,7 @@ module github.com/hashicorp/vault
 // semantic related to Go module handling), this comment should be updated to explain that.
 //
 // Whenever this value gets updated, sdk/go.mod should be updated to the same value.
-go 1.23.3
+go 1.23.4
 
 replace github.com/hashicorp/vault/api => ./api
 
@@ -21,6 +21,11 @@ replace github.com/hashicorp/vault/api/auth/kubernetes => ./api/auth/kubernetes
 replace github.com/hashicorp/vault/api/auth/userpass => ./api/auth/userpass
 
 replace github.com/hashicorp/vault/sdk => ./sdk
+
+replace (
+	github.com/hashicorp/go-immutable-radix => ../go-immutable-radix-bit-opt-v1
+	github.com/hashicorp/go-memdb => ../go-memdb-bit-ops
+)
 
 require (
 	cloud.google.com/go/cloudsqlconn v1.4.3
